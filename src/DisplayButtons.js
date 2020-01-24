@@ -7,39 +7,63 @@ const DisplayButtons = props => {
   const fourthRow = [".", 0, "=", "-"];
 
   const isLastItem = (item, row) => {
-    return item == row[row.length - 1] ? true : false;
+    return item == row[row.length - 1] ? false : true;
   };
 
   return (
     <>
       <table>
         <tr>
-          {firstRow.map(numberId => (
-            <button key={numberId} className="grayButton">
-              {numberId}
-            </button>
-          ))}
+          {firstRow.map(numberId =>
+            isLastItem(numberId, firstRow) ? (
+              <button key={numberId} className="grayButton">
+                {numberId}
+              </button>
+            ) : (
+              <button key={numberId} className="orangeButton">
+                {numberId}
+              </button>
+            )
+          )}
         </tr>
         <tr>
-          {secondRow.map(numberId => (
-            <button key={numberId} className="grayButton">
-              {numberId}
-            </button>
-          ))}
+          {secondRow.map(numberId =>
+            isLastItem(numberId, secondRow) ? (
+              <button key={numberId} className="grayButton">
+                {numberId}
+              </button>
+            ) : (
+              <button key={numberId} className="orangeButton">
+                {numberId}
+              </button>
+            )
+          )}
         </tr>
         <tr>
-          {thirdRow.map(numberId => (
-            <button key={numberId} className="grayButton">
-              {numberId}
-            </button>
-          ))}
+          {thirdRow.map(numberId =>
+            isLastItem(numberId, thirdRow) ? (
+              <button key={numberId} className="grayButton">
+                {numberId}
+              </button>
+            ) : (
+              <button key={numberId} className="orangeButton">
+                {numberId}
+              </button>
+            )
+          )}
         </tr>
         <tr>
-          {fourthRow.map(numberId => (
-            <button key={numberId} className="grayButton">
-              {numberId}
-            </button>
-          ))}
+          {fourthRow.map(numberId =>
+            isLastItem(numberId, fourthRow) ? (
+              <button key={numberId} className="grayButton">
+                {numberId}
+              </button>
+            ) : (
+              <button key={numberId} className="orangeButton">
+                {numberId}
+              </button>
+            )
+          )}
         </tr>
       </table>
     </>
