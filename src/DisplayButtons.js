@@ -16,7 +16,11 @@ const DisplayButtons = props => {
         <tr>
           {firstRow.map(numberId =>
             isLastItem(numberId, firstRow) ? (
-              <button key={numberId} className="grayButton">
+              <button
+                key={numberId}
+                className="grayButton"
+                onClick={props.addNumber(props.numberTrail, numberId)}
+              >
                 {numberId}
               </button>
             ) : (
@@ -29,7 +33,11 @@ const DisplayButtons = props => {
         <tr>
           {secondRow.map(numberId =>
             isLastItem(numberId, secondRow) ? (
-              <button key={numberId} className="grayButton">
+              <button
+                key={numberId}
+                className="grayButton"
+                onClick={props.addNumber(props.numberTrail, numberId)}
+              >
                 {numberId}
               </button>
             ) : (
@@ -42,7 +50,11 @@ const DisplayButtons = props => {
         <tr>
           {thirdRow.map(numberId =>
             isLastItem(numberId, thirdRow) ? (
-              <button key={numberId} className="grayButton">
+              <button
+                key={numberId}
+                className="grayButton"
+                onClick={props.addNumber(props.numberTrail, numberId)}
+              >
                 {numberId}
               </button>
             ) : (
@@ -55,7 +67,11 @@ const DisplayButtons = props => {
         <tr>
           {fourthRow.map(numberId =>
             isLastItem(numberId, fourthRow) ? (
-              <button key={numberId} className="grayButton">
+              <button
+                key={numberId}
+                className="grayButton"
+                onClick={props.addNumber(props.numberTrail, numberId)}
+              >
                 {numberId}
               </button>
             ) : (

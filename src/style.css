@@ -7,9 +7,9 @@
   font-size: 1.4em;
   background-color: #e0e1e6;
   border: thin solid #e0e1e6;
-  color: #888;
+  color: #888888;
   flex: 1;
-  outline: 1px solid #888;
+  outline: 1px solid #888888;
 }
 
 .orangeButton {
@@ -23,7 +23,7 @@
   border: thin solid #fe9241;
   color: white;
   flex: 1;
-  outline: 1px solid #888;
+  outline: 1px solid #888888;
 }
 
 .app {
@@ -39,7 +39,21 @@
   height: 600px;
 }
 
-.column {
+.bottom {
   display: flex;
   width: 100%;
+}
+
+.output {
+  height: 2em;
+  width: 9.1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  background-color: black;
+  color: white;
+  padding: 1.5em;
+  /* outline: 1px solid #888888; */
 }
