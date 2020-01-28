@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { render } from "react-dom";
 import DisplayButtons from "./DisplayButtons";
 import OutputScreen from "./OutputScreen";
@@ -6,8 +6,7 @@ import useCalculatorState from "./useCalculatorState";
 import "./style.css";
 
 const App = () => {
-  const { numberTrail, setCalculatorState } = useCalculatorState();
-  console.log(Array.isArray(numberTrail));
+  const [numberTrail, setCalculatorState] = useCalculatorState();
 
   return (
     <div className="app">

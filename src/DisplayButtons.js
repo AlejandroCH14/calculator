@@ -13,74 +13,84 @@ const DisplayButtons = props => {
   return (
     <>
       <table>
-        <tr>
-          {firstRow.map(numberId =>
-            isLastItem(numberId, firstRow) ? (
-              <button
-                key={numberId}
-                className="grayButton"
-                onClick={props.addNumber(props.numberTrail, numberId)}
-              >
-                {numberId}
-              </button>
-            ) : (
-              <button key={numberId} className="orangeButton">
-                {numberId}
-              </button>
-            )
-          )}
-        </tr>
-        <tr>
-          {secondRow.map(numberId =>
-            isLastItem(numberId, secondRow) ? (
-              <button
-                key={numberId}
-                className="grayButton"
-                onClick={props.addNumber(props.numberTrail, numberId)}
-              >
-                {numberId}
-              </button>
-            ) : (
-              <button key={numberId} className="orangeButton">
-                {numberId}
-              </button>
-            )
-          )}
-        </tr>
-        <tr>
-          {thirdRow.map(numberId =>
-            isLastItem(numberId, thirdRow) ? (
-              <button
-                key={numberId}
-                className="grayButton"
-                onClick={props.addNumber(props.numberTrail, numberId)}
-              >
-                {numberId}
-              </button>
-            ) : (
-              <button key={numberId} className="orangeButton">
-                {numberId}
-              </button>
-            )
-          )}
-        </tr>
-        <tr>
-          {fourthRow.map(numberId =>
-            isLastItem(numberId, fourthRow) ? (
-              <button
-                key={numberId}
-                className="grayButton"
-                onClick={props.addNumber(props.numberTrail, numberId)}
-              >
-                {numberId}
-              </button>
-            ) : (
-              <button key={numberId} className="orangeButton">
-                {numberId}
-              </button>
-            )
-          )}
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              {firstRow.map(symbolId =>
+                isLastItem(symbolId, firstRow) ? (
+                  <button
+                    key={symbolId}
+                    className="grayButton"
+                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                  >
+                    {symbolId}
+                  </button>
+                ) : (
+                  <button key={symbolId} className="orangeButton">
+                    {symbolId}
+                  </button>
+                )
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {secondRow.map(symbolId =>
+                isLastItem(symbolId, secondRow) ? (
+                  <button
+                    key={symbolId}
+                    className="grayButton"
+                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                  >
+                    {symbolId}
+                  </button>
+                ) : (
+                  <button key={symbolId} className="orangeButton">
+                    {symbolId}
+                  </button>
+                )
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {thirdRow.map(symbolId =>
+                isLastItem(symbolId, thirdRow) ? (
+                  <button
+                    key={symbolId}
+                    className="grayButton"
+                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                  >
+                    {symbolId}
+                  </button>
+                ) : (
+                  <button key={symbolId} className="orangeButton">
+                    {symbolId}
+                  </button>
+                )
+              )}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {fourthRow.map(symbolId =>
+                isLastItem(symbolId, fourthRow) ? (
+                  <button
+                    key={symbolId}
+                    className="grayButton"
+                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                  >
+                    {symbolId}
+                  </button>
+                ) : (
+                  <button key={symbolId} className="orangeButton">
+                    {symbolId}
+                  </button>
+                )
+              )}
+            </td>
+          </tr>
+        </tbody>
       </table>
     </>
   );
