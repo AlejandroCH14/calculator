@@ -9,7 +9,6 @@ const DisplayButtons = props => {
   const isLastItem = (item, row) => {
     return item == row[row.length - 1] ? false : true;
   };
-  console.log("render displaybuttons");
 
   return (
     <>
