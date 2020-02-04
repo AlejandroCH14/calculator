@@ -9,6 +9,7 @@ const DisplayButtons = props => {
   const isLastItem = (item, row) => {
     return item == row[row.length - 1] ? false : true;
   };
+  console.log("render displaybuttons");
 
   return (
     <>
@@ -21,12 +22,16 @@ const DisplayButtons = props => {
                   <button
                     key={symbolId}
                     className="grayButton"
-                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                    onClick={() => props.onClick(symbolId)}
                   >
                     {symbolId}
                   </button>
                 ) : (
-                  <button key={symbolId} className="orangeButton">
+                  <button
+                    key={symbolId}
+                    className="orangeButton"
+                    onClick={() => props.onClick(symbolId)}
+                  >
                     {symbolId}
                   </button>
                 )
@@ -40,12 +45,16 @@ const DisplayButtons = props => {
                   <button
                     key={symbolId}
                     className="grayButton"
-                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                    onClick={() => props.onClick(symbolId)}
                   >
                     {symbolId}
                   </button>
                 ) : (
-                  <button key={symbolId} className="orangeButton">
+                  <button
+                    key={symbolId}
+                    className="orangeButton"
+                    onClick={() => props.onClick(symbolId)}
+                  >
                     {symbolId}
                   </button>
                 )
@@ -59,12 +68,16 @@ const DisplayButtons = props => {
                   <button
                     key={symbolId}
                     className="grayButton"
-                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                    onClick={() => props.onClick(symbolId)}
                   >
                     {symbolId}
                   </button>
                 ) : (
-                  <button key={symbolId} className="orangeButton">
+                  <button
+                    key={symbolId}
+                    className="orangeButton"
+                    onClick={() => props.onClick(symbolId)}
+                  >
                     {symbolId}
                   </button>
                 )
@@ -78,12 +91,16 @@ const DisplayButtons = props => {
                   <button
                     key={symbolId}
                     className="grayButton"
-                    onClick={() => props.addNumber(props.numberTrail, symbolId)}
+                    onClick={() => props.onClick(symbolId)}
                   >
                     {symbolId}
                   </button>
                 ) : (
-                  <button key={symbolId} className="orangeButton">
+                  <button
+                    key={symbolId}
+                    className="orangeButton"
+                    onClick={() => props.onClick(symbolId)}
+                  >
                     {symbolId}
                   </button>
                 )
